@@ -24,7 +24,7 @@ const CheckoutSuccessPage = async ({ searchParams }: { searchParams: Promise<{ s
         redirect("/");
     }
 
-    
+
 
 
     return (
@@ -54,3 +54,4 @@ const CheckoutSuccessPage = async ({ searchParams }: { searchParams: Promise<{ s
 };
 
 export default CheckoutSuccessPage;
+// Trigger redeploy
