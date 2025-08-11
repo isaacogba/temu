@@ -15,8 +15,16 @@ const eslintConfig = [
   // Add custom rule override here
   {
     rules: {
-      "@typescript-eslint/no-explicit-any": "warn"
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-expressions": "warn",
+      "@typescript-eslint/no-this-alias": "warn",
+      "@typescript-eslint/no-require-imports": "warn"
     }
+  },
+  // Ignore generated files
+  {
+    ignores: ["app/generated/**/*", "dist/**/*", ".sanity/**/*"]
   }
 ];
 

@@ -3,12 +3,12 @@ import { getCurrentSession, loginUser, registerUser } from '@/app/action/auth';
 import SignUp from '@/app/components/auth/SignUp';
 import { redirect } from 'next/navigation';
 import React from 'react';
-import zod from 'zod';
+import { z } from 'zod';
 
-const SignUpSchema = zod.object({
-    email: zod.string().email(),
-    password: zod.string().min(5),
-})
+const SignUpSchema = z.object({
+    email: z.string().email(),
+    password: z.string().min(5),
+});
 
 const SignUpPage = async () => {
     const { user } = await getCurrentSession();
@@ -40,3 +40,5 @@ const SignUpPage = async () => {
 };
 
 export default SignUpPage;
+
+
